@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakımdayız</title>
+    <style>
+        /* --- Temel Ayarlar --- */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* --- Arka Plan ve Ortalama İşlemleri --- */
+        body {
+            background: url("unnamed.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            /* Flexbox ile dikey ve yatay ortalama */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* --- Kart Tasarımı --- */
+        .maintenance-card {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+            /* Ekranın tamamını kapla ama sağdan soldan 40px (toplam) düş */
+            width: calc(100% - 40px);
+            /* Maksimum genişliği koru */
+            max-width: 500px;
+            /* Her ihtimale karşı dış boşluk (margin) ekle */
+            margin: 20px;
+            /* Kutu modelini sabitle (padding taşmalarını engeller) */
+            box-sizing: border-box;
+        }
+
+        /* --- Logo Resmi Ayarı (Yeni Eklendi) --- */
+        .maintenance-card img {
+            max-width: 100%;
+            /* Resim karttan taşmasın */
+            width: 200px;
+            /* İdeal logo genişliği */
+            height: auto;
+            /* Orantıyı koru */
+            margin-bottom: 20px;
+            /* Altına boşluk bırak */
+        }
+
+        .maintenance-card h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: #f0e68c;
+        }
+
+        .maintenance-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        /* --- Buton Tasarımı --- */
+        .shop-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #c49b3b;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .shop-button:hover {
+            background-color: #a37e2c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="maintenance-card">
+        <img src="logo.webp" alt="Logo">
+
+        <h1>Bakımdayız</h1>
+        <p>Web sitemizde şu anda kısa süreli bir güncelleme çalışması yapılmaktadır. Anlayışınız için teşekkür ederiz.
+        </p>
+
+        <a href="https://eersav.com" class="shop-button" target="_blank">İnternet Mağazamız</a>
+    </div>
+
+</body>
+
+</html>
